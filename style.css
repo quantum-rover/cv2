@@ -1,0 +1,85 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Section titles */
+.section-title {
+    font-size: 1.8em;
+    margin-top: 40px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+/* Contact Information */
+.contact-info a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.contact-info a:hover {
+    color: #007bff;
+}
+
+/* Experience, Education, and Skills sections */
+.experience ul, .education ul, .skills ul, .references ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.experience li, .education li, .skills li, .references li {
+    margin-bottom: 20px;
+}
+
+.experience li strong, .education li strong, .references li strong {
+    font-size: 1.2em;
+}
+
+/* Certifications section */
+.certifications ul {
+    display: flex;
+    gap: 20px;
+}
+
+.certifications .certificate img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+}
