@@ -1,146 +1,122 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #f9f9f9;
     color: #333;
 }
 
+/* Container */
 .container {
-    max-width: 960px;
+    width: 80%;
     margin: 20px auto;
-    padding: 40px;
+    padding: 20px;
     background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Header Styles */
+/* Header */
 header {
-    background-color: #007bff;
-    color: white;
-    padding: 20px;
+    background-color: #004aad;
+    color: #ffffff;
+    padding: 20px 0;
     text-align: center;
-    border-radius: 10px 10px 0 0;
+    border-radius: 8px 8px 0 0;
 }
 
 header h1 {
     margin: 0;
-    font-size: 36px;
+    font-size: 2.4em;
     font-weight: bold;
 }
 
 header p {
-    margin: 10px 0 0;
-    font-size: 18px;
+    margin: 5px 0;
+    font-size: 1.2em;
 }
 
 .contact-info {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 15px;
-    flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 .contact-info a {
-    font-size: 16px;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.1em;
+}
+
+.contact-info a i {
+    margin-right: 5px;
 }
 
 .contact-info a:hover {
     text-decoration: underline;
 }
 
-/* Section Title Styles */
+/* Section Titles */
 .section-title {
-    font-size: 28px;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #007bff;
-    color: #007bff;
+    font-size: 1.8em;
+    color: #004aad;
+    margin-top: 30px;
+    border-bottom: 2px solid #004aad;
+    padding-bottom: 5px;
 }
 
-/* Experience and Education List Styles */
-.experience ul, .education ul {
+/* Experience, Education, Skills, and References */
+.experience ul, .education ul, .skills ul, .references ul {
     list-style-type: none;
     padding: 0;
 }
 
-.experience li, .education li {
-    margin-bottom: 20px;
-    padding-left: 20px;
-    border-left: 4px solid #007bff;
-}
-
-.experience strong, .education strong {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-/* Skills Section Styles */
-.skills ul {
-    list-style-type: none;
-    padding: 0;
-    columns: 2;
-}
-
-.skills li {
-    margin-bottom: 5px;
-    padding-left: 15px;
-    position: relative;
-}
-
-.skills li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: #007bff;
-}
-
-/* Certifications Section Styles */
-.certifications ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.certifications .certificate img {
-    width: 100px;
-    height: 100px;
-    transition: transform 0.3s ease;
-}
-
-.certifications .certificate img:hover {
-    transform: scale(1.1);
-}
-
-/* References Section Styles */
-.references ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.references li {
+.experience li, .education li, .skills li, .references li {
     margin-bottom: 20px;
 }
 
-.references strong {
-    font-size: 20px;
-    font-weight: bold;
+.experience li strong, .education li strong, .references li strong {
+    font-size: 1.2em;
 }
 
-/* Footer Styles */
-footer {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 0;
+.experience ul li ul, .skills ul {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.skills-grid .skill {
+    background-color: #e9f5ff;
+    padding: 10px;
+    border-radius: 5px;
     text-align: center;
-    font-size: 14px;
-    border-radius: 0 0 10px 10px;
+    font-weight: bold;
+}
+
+/* Certifications Section */
+.certifications-list {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+}
+
+.certifications-list .certificate img {
+    width: 70px;
+    height: 70px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px 0;
+    background: #004aad;
+    color: #ffffff;
+    border-radius: 0 0 8px 8px;
 }
