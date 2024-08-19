@@ -1,56 +1,72 @@
-/* General styles */
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
     color: #333;
 }
 
 /* Container */
 .container {
     width: 80%;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Header */
 header {
-    background: #333;
-    color: #fff;
+    background-color: #004aad;
+    color: #ffffff;
     padding: 20px 0;
     text-align: center;
+    border-radius: 8px 8px 0 0;
 }
 
 header h1 {
     margin: 0;
+    font-size: 2.4em;
+    font-weight: bold;
 }
 
-/* Section titles */
-.section-title {
-    font-size: 1.8em;
-    margin-top: 40px;
-    border-bottom: 2px solid #333;
-    padding-bottom: 5px;
-}
-
-/* Contact Information */
-.contact-info a {
-    display: block;
-    color: #333;
-    text-decoration: none;
+header p {
     margin: 5px 0;
+    font-size: 1.2em;
+}
+
+.contact-info {
+    margin-top: 10px;
+}
+
+.contact-info a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
     font-size: 1.1em;
 }
 
-.contact-info a:hover {
-    color: #007bff;
+.contact-info a i {
+    margin-right: 5px;
 }
 
-/* Experience, Education, and Skills sections */
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 1.8em;
+    color: #004aad;
+    margin-top: 30px;
+    border-bottom: 2px solid #004aad;
+    padding-bottom: 5px;
+}
+
+/* Experience, Education, Skills, and References */
 .experience ul, .education ul, .skills ul, .references ul {
     list-style-type: none;
     padding: 0;
@@ -64,15 +80,35 @@ header h1 {
     font-size: 1.2em;
 }
 
-/* Certifications section */
-.certifications ul {
+.experience ul li ul, .skills ul {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.skills-grid .skill {
+    background-color: #e9f5ff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Certifications Section */
+.certifications-list {
     display: flex;
+    justify-content: start;
     gap: 20px;
 }
 
-.certifications .certificate img {
-    width: 50px;
-    height: 50px;
+.certifications-list .certificate img {
+    width: 70px;
+    height: 70px;
 }
 
 /* Footer */
@@ -80,6 +116,7 @@ footer {
     text-align: center;
     margin-top: 40px;
     padding: 10px 0;
-    background: #333;
-    color: #fff;
+    background: #004aad;
+    color: #ffffff;
+    border-radius: 0 0 8px 8px;
 }
