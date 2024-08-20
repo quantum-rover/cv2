@@ -26,18 +26,18 @@ body {
 /* Header */
 header {
     background: #007bff;
-    color: black;
+    color: white;
     padding: 20px;
     text-align: center;
 }
 
 header h1 {
     margin-bottom: 10px;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
 }
 
 header p {
-    font-size: 2.2rem;
+    font-size: 1.2rem;
 }
 
 /* Section Titles */
@@ -62,10 +62,7 @@ header p {
     margin-bottom: 10px;
     font-size: 1.2rem;
 }
-.contact-info a:hover {
-    color: #007bff; /* Color change on hover */
-    text-decoration: none; /* Optional: Add underline on hover */
-}
+
 .contact-info a i {
     margin-right: 8px;
     color: #007bff;
@@ -77,20 +74,38 @@ section {
 }
 
 /* Experience List */
-.experience ul, .education ul, .skills ul, .certifications ul, .references ul {
+.experience ul {
     list-style-type: none;
-    padding-left: 20px;
+    padding-left: 0;
 }
 
-.experience ul li, .education ul li, .skills ul li, .certifications ul li, .references ul li {
-    margin-bottom: 15px;
+.experience ul li {
+    margin-bottom: 20px;
 }
 
-.experience ul li strong, .education ul li strong, .references ul li strong {
-    font-size: 1.2rem;
+.position-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
-.experience ul li ul, .education ul li ul {
+.position-title strong {
+    font-size: 1.4rem;
+    color: #000000;
+}
+
+.work-period {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.company-name {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.experience ul li ul {
     list-style-type: disc;
     padding-left: 20px;
 }
@@ -112,7 +127,7 @@ section {
 /* Certifications */
 .certifications ul {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
 }
 
@@ -156,8 +171,20 @@ footer {
         font-size: 1rem;
     }
 
-    .experience ul li strong, .education ul li strong, .references ul li strong {
-        font-size: 1.1rem;
+    .position-title strong {
+        font-size: 1.3rem;
+    }
+
+    .work-period {
+        font-size: 1rem;
+    }
+
+    .company-name {
+        font-size: 1rem;
+    }
+
+    .experience ul li {
+        margin-bottom: 15px;
     }
 
     .skills ul {
