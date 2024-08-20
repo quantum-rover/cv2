@@ -1,122 +1,167 @@
-/* General Styles */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+/* Body and Global Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
     color: #333;
+    padding: 20px;
 }
 
 /* Container */
 .container {
-    width: 80%;
-    margin: 20px auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Header */
 header {
-    background-color: #004aad;
-    color: #ffffff;
-    padding: 20px 0;
+    background: #007bff;
+    color: black;
+    padding: 20px;
     text-align: center;
-    border-radius: 8px 8px 0 0;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.4em;
-    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
 }
 
 header p {
-    margin: 5px 0;
-    font-size: 1.2em;
-}
-
-.contact-info {
-    margin-top: 10px;
-}
-
-.contact-info a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 1.1em;
-}
-
-.contact-info a i {
-    margin-right: 5px;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
+    font-size: 1.2rem;
 }
 
 /* Section Titles */
 .section-title {
-    font-size: 1.8em;
-    color: #004aad;
-    margin-top: 30px;
-    border-bottom: 2px solid #004aad;
-    padding-bottom: 5px;
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-bottom: 15px;
 }
 
-/* Experience, Education, Skills, and References */
-.experience ul, .education ul, .skills ul, .references ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.experience li, .education li, .skills li, .references li {
-    margin-bottom: 20px;
-}
-
-.experience li strong, .education li strong, .references li strong {
-    font-size: 1.2em;
-}
-
-.experience ul li ul, .skills ul {
-    margin-top: 10px;
-    margin-left: 20px;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-}
-
-.skills-grid .skill {
-    background-color: #e9f5ff;
-    padding: 10px;
+/* Contact Information */
+.contact-info {
+    background-color: #e9ecef;
+    padding: 15px;
     border-radius: 5px;
-    text-align: center;
-    font-weight: bold;
+    margin-bottom: 30px;
 }
 
-/* Certifications Section */
-.certifications-list {
+.contact-info a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+.contact-info a:hover {
+    color: #007bff; /* Color change on hover */
+    text-decoration: none; /* Optional: Add underline on hover */
+}
+.contact-info a i {
+    margin-right: 8px;
+    color: #007bff;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 40px;
+}
+
+/* Experience List */
+.experience ul, .education ul, .skills ul, .certifications ul, .references ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.experience ul li, .education ul li, .skills ul li, .certifications ul li, .references ul li {
+    margin-bottom: 15px;
+}
+
+.experience ul li strong, .education ul li strong, .references ul li strong {
+    font-size: 1.2rem;
+}
+
+.experience ul li ul, .education ul li ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Skills List */
+.skills ul {
     display: flex;
-    justify-content: start;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-.certifications-list .certificate img {
-    width: 70px;
-    height: 70px;
+.skills ul li {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 3px;
+}
+
+/* Certifications */
+.certifications ul {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.certifications ul li {
+    list-style-type: none;
+}
+
+.certifications ul li img {
+    max-width: 150px;
+    height: auto;
 }
 
 /* Footer */
 footer {
+    background: #c0c0c0;
+    color: white;
     text-align: center;
-    margin-top: 40px;
-    padding: 10px 0;
-    background: #004aad;
-    color: #ffffff;
-    border-radius: 0 0 8px 8px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .contact-info a {
+        font-size: 1rem;
+    }
+
+    .experience ul li strong, .education ul li strong, .references ul li strong {
+        font-size: 1.1rem;
+    }
+
+    .skills ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
