@@ -53,19 +53,37 @@ header p {
     padding: 15px;
     border-radius: 5px;
     margin-bottom: 30px;
+    max-width: 600px; /* Restricting width */
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.contact-info a {
-    display: block;
+.contact-item {
+    margin-bottom: 10px;
+}
+
+.contact-item a {
+    display: flex;
+    align-items: center;
     color: #333;
     text-decoration: none;
-    margin-bottom: 10px;
     font-size: 1.2rem;
+    transition: color 0.3s ease;
 }
 
-.contact-info a i {
-    margin-right: 8px;
+.contact-item a:hover {
     color: #007bff;
+}
+
+.contact-item i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover i {
+    color: #0056b3;
 }
 
 /* Section Styling */
@@ -91,7 +109,7 @@ section {
 
 .position-title strong {
     font-size: 1.4rem;
-    color: #000000;
+    color: #007bff;
 }
 
 .work-period {
@@ -127,7 +145,7 @@ section {
 /* Certifications */
 .certifications ul {
     display: flex;
-    gap: 30px;
+    gap: 20px;
     justify-content: center;
 }
 
@@ -136,13 +154,13 @@ section {
 }
 
 .certifications ul li img {
-    max-width: 150px;
+    max-width: 100px;
     height: auto;
 }
 
 /* Footer */
 footer {
-    background: #c0c0c0;
+    background: #007bff;
     color: white;
     text-align: center;
     padding: 10px;
@@ -167,7 +185,11 @@ footer {
         font-size: 1.5rem;
     }
 
-    .contact-info a {
+    .contact-info {
+        max-width: 100%; /* Ensures full width for smaller screens */
+    }
+
+    .contact-item a {
         font-size: 1rem;
     }
 
