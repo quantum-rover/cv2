@@ -17,10 +17,7 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                   <li><a href="#" id="contactBtn">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -48,7 +45,7 @@
             <section id="summary">
                 <h2>Summary</h2>
                 <p>
-                    I am Eduard Popov, a versatile IT Support Technician with a background in maritime logistics and safety. Currently, I am focused on leveraging my strong technical skills in troubleshooting, hardware maintenance, and software support. I am seeking to apply my expertise in a dynamic IT environment, where I can contribute to the efficiency and security of systems. My goal is to make a positive impact in IT while continuously learning and growing.
+                    Dedicated IT Support Technician with a robust background in maritime logistics and safety. I specialize in troubleshooting, hardware maintenance, and software administration, including expertise in systems like Microsoft365, Azure, Citrix and Empower. My goal is to contribute to the efficiency and security of IT systems in a dynamic environment while continuously advancing my skills. I’m driven to make a meaningful impact in IT and a commitment to excellence.
                 </p>
             </section>
 
@@ -174,16 +171,42 @@
         </div>
     </footer>
 
-    <!-- Smooth Scroll Script -->
+    <!-- Contact Popup -->
+    <div id="contactPopup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <section class="contact-info">
+                <h2>Contact Information</h2>
+                <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+                <p>Website: <a href="https://www.yourwebsite.com" target="_blank">yourwebsite.com</a></p>
+            </section>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
     <script>
-        document.querySelectorAll('.sidebar ul li a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+        // Get the elements
+        var contactBtn = document.getElementById("contactBtn");
+        var contactPopup = document.getElementById("contactPopup");
+        var closeBtn = document.querySelector(".close-btn");
+
+        // Show the popup when the contact button is clicked
+        contactBtn.onclick = function() {
+            contactPopup.style.display = "block";
+        }
+
+        // Hide the popup when the close button is clicked
+        closeBtn.onclick = function() {
+            contactPopup.style.display = "none";
+        }
+
+        // Hide the popup when clicking outside of it
+        window.onclick = function(event) {
+            if (event.target == contactPopup) {
+                contactPopup.style.display = "none";
+            }
+        }
     </script>
 </body>
 </html>
