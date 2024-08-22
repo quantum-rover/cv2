@@ -164,35 +164,66 @@ footer {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for a modern look */
 }
 
 .popup-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
+    background-color: #ffffff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
     width: 80%;
     max-width: 500px;
-    border-radius: 5px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
     position: relative;
+    transform: scale(0.7); /* Start smaller for animation */
+    animation: popupOpen 0.3s ease forwards; /* Animate opening */
+}
+
+@keyframes popupOpen {
+    to {
+        transform: scale(1); /* Scale to normal size */
+    }
 }
 
 .close-btn {
     position: absolute;
-    top: 10px;
+    top: 15px;
     right: 20px;
-    color: #aaa;
-    font-size: 28px;
+    color: #666;
+    font-size: 25px;
     font-weight: bold;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .close-btn:hover,
 .close-btn:focus {
-    color: black;
+    color: #e74c3c; /* Red color on hover for a more interactive feel */
+}
+
+.contact-info h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contact-info a {
+    color: #4a90e2;
     text-decoration: none;
-    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #2c3e50; /* Darker hover color */
 }
 
 /* Responsive Design */
