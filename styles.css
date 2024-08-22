@@ -45,35 +45,40 @@ header nav ul li {
     margin-left: 20px;
 }
 
-header nav ul li {
-    margin-left: 20px;
-    display: inline-block;
-}
-
 header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    font-size: 18px;
 }
 
-header nav ul li a i {
-    font-size: 24px; /* Adjust the size of the icons */
-    color: #fff; /* Icon color */
+header nav ul li a:hover {
+    text-decoration: underline;
 }
 
-header nav ul li a i:hover {
-    color: #d9e6f2; /* Lighter color on hover */
+/* Header Social Icons */
+header .social-icons {
+    display: flex;
+    align-items: center;
+}
+
+header .social-icons a {
+    margin-left: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px; /* Increased icon size */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+header .social-icons a:hover {
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+    color: #d9e6f2;
 }
 
 /* Main Content Styles */
 .main-content {
     display: flex;
+    margin: 20px 0;
     justify-content: center;
-    align-items: flex-start;
-    margin: 20px auto;
-    max-width: 1200px;
-    padding: 0 20px;
 }
 
 /* Sidebar Styles */
@@ -84,8 +89,6 @@ header nav ul li a i:hover {
     padding-right: 20px;
     background-color: #e8f0fe;
     border-radius: 10px;
-    position: sticky;
-    top: 20px;
     height: fit-content;
 }
 
@@ -118,6 +121,22 @@ header nav ul li a i:hover {
 
 .sidebar ul li a:hover {
     text-decoration: underline;
+}
+
+/* Sticky Sidebar for Desktop */
+@media (min-width: 769px) {
+    .sidebar {
+        position: sticky;
+        top: 20px;
+    }
+}
+
+/* Non-Sticky Sidebar for Mobile */
+@media (max-width: 768px) {
+    .sidebar {
+        position: static;
+        margin-bottom: 20px;
+    }
 }
 
 /* CV Content Styles */
@@ -168,8 +187,10 @@ footer {
     font-size: 0.9rem;
 }
 
+/* Certifications Section */
 .certification-list {
     display: flex;
+    justify-content: center; /* Center the certification logos */
     gap: 20px;
     list-style-type: none;
     padding-left: 0;
