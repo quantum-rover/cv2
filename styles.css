@@ -154,6 +154,23 @@ footer {
     font-size: 0.9rem;
 }
 
+.certification-list {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.certificate img {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.certificate img:hover {
+    transform: scale(1.1); /* Increases the size by 10% when hovered */
+}
+
 /* Popup Styles */
 .popup {
     display: none;
