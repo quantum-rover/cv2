@@ -55,16 +55,31 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* Header Social Icons */
+header .social-icons {
+    display: flex;
+    align-items: center;
+}
+
+header .social-icons a {
+    margin-left: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px; /* Increased icon size */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+header .social-icons a:hover {
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+    color: #d9e6f2;
+}
+
 /* Main Content Styles */
 .main-content {
     display: flex;
+    margin: 20px 0;
     justify-content: center;
-    align-items: flex-start; /* Aligns items to the top (if necessary) */
-    margin: 20px auto; /* Centers the main content horizontally */
-    max-width: 1200px; /* Optional: Constrain the maximum width */
-    padding: 0 20px; /* Optional: Add some padding for better spacing */
 }
-
 
 /* Sidebar Styles */
 .sidebar {
@@ -74,8 +89,6 @@ header nav ul li a:hover {
     padding-right: 20px;
     background-color: #e8f0fe;
     border-radius: 10px;
-    position: sticky;
-    top: 20px;
     height: fit-content;
 }
 
@@ -108,6 +121,22 @@ header nav ul li a:hover {
 
 .sidebar ul li a:hover {
     text-decoration: underline;
+}
+
+/* Sticky Sidebar for Desktop */
+@media (min-width: 769px) {
+    .sidebar {
+        position: sticky;
+        top: 20px;
+    }
+}
+
+/* Non-Sticky Sidebar for Mobile */
+@media (max-width: 768px) {
+    .sidebar {
+        position: static;
+        margin-bottom: 20px;
+    }
 }
 
 /* CV Content Styles */
@@ -159,33 +188,23 @@ footer {
 }
 
 /* Certifications Section */
-.certifications {
-    text-align: center;
-    margin: 40px 0;
-}
-
 .certification-list {
-    list-style-type: none;
-    padding: 0;
     display: flex;
-    justify-content: center;  /* Center the logos horizontally */
-    align-items: center;      /* Center the logos vertically */
+    justify-content: center; /* Center the certification logos */
+    gap: 20px;
+    list-style-type: none;
+    padding-left: 0;
 }
 
-.certification-list li {
-    margin: 0 20px;
-}
-
-.certification-list img {
-    width: 80px;
-    height: 80px;
+.certificate img {
+    width: 100px;
+    height: auto;
     transition: transform 0.3s ease;
 }
 
-.certification-list img:hover {
-    transform: scale(1.1);
+.certificate img:hover {
+    transform: scale(1.1); /* Increases the size by 10% when hovered */
 }
-
 
 /* Popup Styles */
 .popup {
