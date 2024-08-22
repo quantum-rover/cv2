@@ -45,26 +45,36 @@ header nav ul li {
     margin-left: 20px;
 }
 
+header nav ul li {
+    margin-left: 20px;
+    display: inline-block;
+}
+
 header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    font-size: 18px;
 }
 
-header nav ul li a:hover {
-    text-decoration: underline;
+header nav ul li a i {
+    font-size: 24px; /* Adjust the size of the icons */
+    color: #fff; /* Icon color */
+}
+
+header nav ul li a i:hover {
+    color: #d9e6f2; /* Lighter color on hover */
 }
 
 /* Main Content Styles */
 .main-content {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Aligns items to the top (if necessary) */
-    margin: 20px auto; /* Centers the main content horizontally */
-    max-width: 1200px; /* Optional: Constrain the maximum width */
-    padding: 0 20px; /* Optional: Add some padding for better spacing */
+    align-items: flex-start;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 0 20px;
 }
-
 
 /* Sidebar Styles */
 .sidebar {
@@ -74,17 +84,11 @@ header nav ul li a:hover {
     padding-right: 20px;
     background-color: #e8f0fe;
     border-radius: 10px;
-    position: relative; /* Default position for mobile devices */
+    position: sticky;
+    top: 20px;
     height: fit-content;
 }
 
-/* Make the sidebar sticky on larger screens */
-@media (min-width: 769px) {
-    .sidebar {
-        position: sticky;
-        top: 20px;
-    }
-}
 .sidebar .profile-pic {
     text-align: center;
     margin-bottom: 20px;
@@ -164,34 +168,22 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Certifications Section */
-.certifications {
-    text-align: center;
-    margin: 40px 0;
-}
-
 .certification-list {
-    list-style-type: none;
-    padding: 0;
     display: flex;
-    justify-content: center;  /* Center the logos horizontally */
-    align-items: center;      /* Center the logos vertically */
+    gap: 20px;
+    list-style-type: none;
+    padding-left: 0;
 }
 
-.certification-list li {
-    margin: 0 20px;
-}
-
-.certification-list img {
-    width: 80px;
-    height: 80px;
+.certificate img {
+    width: 100px;
+    height: auto;
     transition: transform 0.3s ease;
 }
 
-.certification-list img:hover {
-    transform: scale(1.1);
+.certificate img:hover {
+    transform: scale(1.1); /* Increases the size by 10% when hovered */
 }
-
 
 /* Popup Styles */
 .popup {
