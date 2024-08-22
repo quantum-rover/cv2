@@ -158,22 +158,34 @@ footer {
     font-size: 0.9rem;
 }
 
-.certification-list {
-    display: flex;
-    gap: 20px;
-    list-style-type: none;
-    padding-left: 0;
+/* Certifications Section */
+.certifications {
+    text-align: center;
+    margin: 40px 0;
 }
 
-.certificate img {
-    width: 100px;
-    height: auto;
+.certification-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;  /* Center the logos horizontally */
+    align-items: center;      /* Center the logos vertically */
+}
+
+.certification-list li {
+    margin: 0 20px;
+}
+
+.certification-list img {
+    width: 80px;
+    height: 80px;
     transition: transform 0.3s ease;
 }
 
-.certificate img:hover {
-    transform: scale(1.1); /* Increases the size by 10% when hovered */
+.certification-list img:hover {
+    transform: scale(1.1);
 }
+
 
 /* Popup Styles */
 .popup {
