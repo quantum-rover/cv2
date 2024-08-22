@@ -58,9 +58,13 @@ header nav ul li a:hover {
 /* Main Content Styles */
 .main-content {
     display: flex;
-    margin: 20px 0;
     justify-content: center;
+    align-items: flex-start; /* Aligns items to the top (if necessary) */
+    margin: 20px auto; /* Centers the main content horizontally */
+    max-width: 1200px; /* Optional: Constrain the maximum width */
+    padding: 0 20px; /* Optional: Add some padding for better spacing */
 }
+
 
 /* Sidebar Styles */
 .sidebar {
