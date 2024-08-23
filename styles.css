@@ -79,9 +79,16 @@ header nav ul li a i:hover {
     padding-right: 20px;
     background-color: #e8f0fe;
     border-radius: 10px;
-    position: sticky;
-    top: 20px;
+    position: relative; /* Default position for mobile devices */
     height: fit-content;
+}
+
+/* Make the sidebar sticky on larger screens */
+@media (min-width: 769px) {
+    .sidebar {
+        position: sticky;
+        top: 20px;
+    }
 }
 
 .sidebar .profile-pic {
