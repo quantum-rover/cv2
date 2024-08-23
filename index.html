@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <!-- Header Section -->
     <header>
@@ -138,7 +140,7 @@
             </section>
 
             <!-- Certifications Section -->
-            <section class="certifications">
+            <section id="certifications" class="certifications">
                 <h2 class="section-title">Certifications</h2>
                 <ul class="certification-list">
                     <li class="certificate">
@@ -177,44 +179,32 @@
         </section>
     </div>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <p>Eduard Popov &copy; 2024</p>
-        </div>
-    </footer>
-
-    <!-- Popup Modal -->
-    <div id="contactPopup" class="popup">
-        <div class="popup-content">
-            <span class="close-btn">&times;</span>
-            <div class="contact-info">
-                <h2>Contact Me</h2>
-                <p>Email: <a href="mailto:eduardpopov@domain.com">eduardpopov@domain.com</a></p>
-                <p>Phone: +44 1234 567890</p>
-            </div>
+    <!-- Contact Form -->
+    <div class="contact-form-container">
+        <div class="contact-form">
+            <button class="close-btn">&times;</button>
+            <h2>Contact Me</h2>
+            <form action="mailto:eduard.popov@example.com" method="post" enctype="text/plain">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <input type="submit" value="Send">
+            </form>
         </div>
     </div>
 
-    <!-- JavaScript to handle the popup -->
-    <script>
-        const contactBtn = document.getElementById('contactBtn');
-        const contactPopup = document.getElementById('contactPopup');
-        const closeBtn = document.querySelector('.close-btn');
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Eduard Popov. All rights reserved.</p>
+        </div>
+    </footer>
 
-        contactBtn.addEventListener('click', () => {
-            contactPopup.style.display = 'block';
-        });
-
-        closeBtn.addEventListener('click', () => {
-            contactPopup.style.display = 'none';
-        });
-
-        window.addEventListener('click', (e) => {
-            if (e.target == contactPopup) {
-                contactPopup.style.display = 'none';
-            }
-        });
-    </script>
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
 </body>
+
 </html>
