@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +9,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
-
 <body>
     <!-- Header Section -->
     <header>
@@ -140,7 +138,7 @@
             </section>
 
             <!-- Certifications Section -->
-            <section id="certifications" class="certifications">
+            <section class="certifications">
                 <h2 class="section-title">Certifications</h2>
                 <ul class="certification-list">
                     <li class="certificate">
@@ -179,7 +177,14 @@
         </section>
     </div>
 
-     <!-- Popup Modal -->
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>Eduard Popov &copy; 2024</p>
+        </div>
+    </footer>
+
+    <!-- Popup Modal -->
     <div id="contactPopup" class="popup">
         <div class="popup-content">
             <span class="close-btn">&times;</span>
@@ -193,42 +198,23 @@
 
     <!-- JavaScript to handle the popup -->
     <script>
-        // JavaScript to handle the popup
-        document.addEventListener('DOMContentLoaded', function () {
-            const contactBtn = document.getElementById('contactBtn');
-            const contactPopup = document.getElementById('contactPopup');
-            const closeBtn = document.querySelector('.close-btn');
+        const contactBtn = document.getElementById('contactBtn');
+        const contactPopup = document.getElementById('contactPopup');
+        const closeBtn = document.querySelector('.close-btn');
 
-            // Show the popup when the contact button is clicked
-            contactBtn.addEventListener('click', () => {
-                contactPopup.style.display = 'block';
-            });
+        contactBtn.addEventListener('click', () => {
+            contactPopup.style.display = 'block';
+        });
 
-            // Hide the popup when the close button is clicked
-            closeBtn.addEventListener('click', () => {
+        closeBtn.addEventListener('click', () => {
+            contactPopup.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target == contactPopup) {
                 contactPopup.style.display = 'none';
-            });
-
-            // Hide the popup when clicking outside of the popup content
-            window.addEventListener('click', (e) => {
-                if (e.target === contactPopup) {
-                    contactPopup.style.display = 'none';
-                }
-            });
+            }
         });
     </script>
 </body>
-</html>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Eduard Popov. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="scripts.js"></script>
-</body>
-
 </html>
