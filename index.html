@@ -179,22 +179,46 @@
         </section>
     </div>
 
-    <!-- Contact Form -->
-    <div class="contact-form-container">
-        <div class="contact-form">
-            <button class="close-btn">&times;</button>
-            <h2>Contact Me</h2>
-            <form action="mailto:eduard.popov@example.com" method="post" enctype="text/plain">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                <input type="submit" value="Send">
-            </form>
+     <!-- Popup Modal -->
+    <div id="contactPopup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <div class="contact-info">
+                <h2>Contact Me</h2>
+                <p>Email: <a href="mailto:eduardpopov@domain.com">eduardpopov@domain.com</a></p>
+                <p>Phone: +44 1234 567890</p>
+            </div>
         </div>
     </div>
+
+    <!-- JavaScript to handle the popup -->
+    <script>
+        // JavaScript to handle the popup
+        document.addEventListener('DOMContentLoaded', function () {
+            const contactBtn = document.getElementById('contactBtn');
+            const contactPopup = document.getElementById('contactPopup');
+            const closeBtn = document.querySelector('.close-btn');
+
+            // Show the popup when the contact button is clicked
+            contactBtn.addEventListener('click', () => {
+                contactPopup.style.display = 'block';
+            });
+
+            // Hide the popup when the close button is clicked
+            closeBtn.addEventListener('click', () => {
+                contactPopup.style.display = 'none';
+            });
+
+            // Hide the popup when clicking outside of the popup content
+            window.addEventListener('click', (e) => {
+                if (e.target === contactPopup) {
+                    contactPopup.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
 
     <!-- Footer -->
     <footer>
