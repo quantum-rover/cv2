@@ -1,23 +1,33 @@
-/* Resetting Default Styles */
-* {
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 /* Header Styles */
 header {
-    background: #4a90e2;
+    background-color: #007acc;
     color: #fff;
-    padding: 1rem 0;
+    padding: 10px 0;
 }
 
 header .container {
@@ -26,87 +36,65 @@ header .container {
     align-items: center;
 }
 
-header .logo h1 {
+header h1 {
+    font-size: 24px;
     margin: 0;
 }
 
-header .logo h3 {
+header h3 {
+    font-size: 14px;
     margin: 0;
-    font-size: 1.2rem;
-    color: #d9e6f2;
 }
 
 header nav ul {
-    list-style: none;
     display: flex;
+    gap: 20px;
 }
 
 header nav ul li {
-    margin-left: 20px;
+    display: inline;
 }
 
 header nav ul li a {
     color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+    font-size: 18px;
 }
 
 header nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Header Social Icons */
-header .social-icons {
-    display: flex;
-    align-items: center;
-}
-
-header .social-icons a {
-    margin-left: 20px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 24px; /* Increased icon size */
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-header .social-icons a:hover {
-    transform: scale(1.2); /* Slightly enlarge the icon on hover */
-    color: #d9e6f2;
+    color: #ffb366;
 }
 
 /* Main Content Styles */
-.main-content {
-    display: flex;
-    margin: 20px 0;
-    justify-content: center;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
 }
 
-/* Sidebar Styles */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
 .sidebar {
-    width: 25%;
-    margin-right: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: #e8f0fe;
-    border-radius: 10px;
+    flex: 1 1 300px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 20px;
     height: fit-content;
 }
 
-.sidebar .profile-pic {
-    text-align: center;
+.profile-pic img {
+    width: 100%;
+    border-radius: 50%;
     margin-bottom: 20px;
 }
 
-.sidebar .profile-pic img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #4a90e2;
-}
-
 .sidebar ul {
-    list-style: none;
+    margin-top: 20px;
 }
 
 .sidebar ul li {
@@ -114,187 +102,187 @@ header .social-icons a:hover {
 }
 
 .sidebar ul li a {
-    text-decoration: none;
-    color: #4a90e2;
+    color: #007acc;
     font-weight: bold;
 }
 
 .sidebar ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Sticky Sidebar for Desktop */
-@media (min-width: 769px) {
-    .sidebar {
-        position: sticky;
-        top: 20px;
-    }
-}
-
-/* Non-Sticky Sidebar for Mobile */
-@media (max-width: 768px) {
-    .sidebar {
-        position: static;
-        margin-bottom: 20px;
-    }
+    color: #ffb366;
 }
 
 /* CV Content Styles */
 .cv-content {
-    width: 70%;
+    flex: 2 1 600px;
+    background-color: #fff;
     padding: 20px;
-    background: #fff;
-    border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .cv-content h2 {
-    color: #2c3e50;
-    border-bottom: 2px solid #4a90e2;
-    padding-bottom: 10px;
+    border-bottom: 2px solid #007acc;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    color: #007acc;
+}
+
+.job {
     margin-bottom: 20px;
 }
 
-.cv-content p, .cv-content ul {
-    margin-bottom: 20px;
-}
-
-.cv-content h3 {
-    font-size: 1.2rem;
+.job h3 {
+    margin: 0;
+    font-size: 18px;
     color: #333;
-    display: flex;
-    justify-content: space-between;
+}
+
+.job h4 {
+    margin: 5px 0 10px 0;
+    font-size: 16px;
+    color: #007acc;
+}
+
+.job ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.job ul li {
     margin-bottom: 10px;
 }
 
-.cv-content .period {
-    font-weight: normal;
-    color: #666;
-    font-size: 0.9rem;
+/* Skills Section */
+#skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.cv-content ul {
-    list-style-type: disc;
-    padding-left: 20px;
+#skills ul li {
+    background-color: #007acc;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+/* Education Section */
+#education ul {
+    padding-left: 0;
+}
+
+#education ul li {
+    margin-bottom: 20px;
+}
+
+#education ul li strong {
+    display: block;
+}
+
+/* Certifications Section */
+.certifications {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.certification-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.certificate img {
+    width: 50px;
+    height: 50px;
+}
+
+/* References Section */
+#references ul {
+    padding-left: 0;
+}
+
+#references ul li {
+    margin-bottom: 20px;
+}
+
+#references ul li strong {
+    display: block;
+    color: #007acc;
+}
+
+/* Contact Form Styles */
+.contact-form-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form {
+    background: #fff;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.contact-form h2 {
+    margin-top: 0;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form input[type="submit"] {
+    background: #007acc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.contact-form input[type="submit"]:hover {
+    background: #005f99;
+}
+
+.contact-form .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.contact-form .close-btn:hover {
+    color: #ff0000;
 }
 
 /* Footer Styles */
 footer {
-    background: #2c3e50;
+    background-color: #007acc;
     color: #fff;
+    padding: 10px 0;
     text-align: center;
-    padding: 1rem 0;
-    font-size: 0.9rem;
-}
-
-/* Certifications Section */
-.certification-list {
-    display: flex;
-    justify-content: center; /* Center the certification logos */
-    gap: 20px;
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.certificate img {
-    width: 100px;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-.certificate img:hover {
-    transform: scale(1.1); /* Increases the size by 10% when hovered */
-}
-
-/* Popup Styles */
-.popup {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for a modern look */
-}
-
-.popup-content {
-    background-color: #ffffff;
-    margin: 10% auto;
-    padding: 30px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 500px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
-    position: relative;
-    transform: scale(0.7); /* Start smaller for animation */
-    animation: popupOpen 0.3s ease forwards; /* Animate opening */
-}
-
-@keyframes popupOpen {
-    to {
-        transform: scale(1); /* Scale to normal size */
-    }
-}
-
-.close-btn {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    color: #666;
-    font-size: 25px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.close-btn:hover,
-.close-btn:focus {
-    color: #e74c3c; /* Red color on hover for a more interactive feel */
-}
-
-.contact-info h2 {
-    color: #2c3e50;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.contact-info p {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.contact-info a {
-    color: #4a90e2;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.contact-info a:hover {
-    color: #2c3e50; /* Darker hover color */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .main-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .sidebar {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .cv-content {
-        width: 100%;
-    }
-
-    .popup-content {
-        width: 90%;
-    }
+    margin-top: 20px;
 }
