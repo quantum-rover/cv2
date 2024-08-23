@@ -43,18 +43,24 @@ header nav ul {
 
 header nav ul li {
     margin-left: 20px;
+    display: inline-block;
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    font-size: 18px;
 }
 
-header nav ul li a:hover {
-    text-decoration: underline;
+header nav ul li a i {
+    font-size: 24px; /* Adjust the size of the icons */
+    color: #fff; /* Icon color */
 }
 
+header nav ul li a i:hover {
+    color: #d9e6f2; /* Lighter color on hover */
+}
 /* Main Content Styles */
 .main-content {
     display: flex;
