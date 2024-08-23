@@ -1,21 +1,23 @@
-// scripts.js
-document.addEventListener('DOMContentLoaded', function() {
-    var contactBtn = document.getElementById('contactBtn');
-    var contactFormContainer = document.querySelector('.contact-form-container');
-    var closeBtn = document.querySelector('.close-btn');
+// JavaScript to handle the popup
+document.addEventListener('DOMContentLoaded', function () {
+    const contactBtn = document.getElementById('contactBtn');
+    const contactPopup = document.getElementById('contactPopup');
+    const closeBtn = document.querySelector('.close-btn');
 
-    contactBtn.addEventListener('click', function() {
-        contactFormContainer.style.display = 'flex';
+    // Show the popup when the contact button is clicked
+    contactBtn.addEventListener('click', () => {
+        contactPopup.style.display = 'block';
     });
 
-    closeBtn.addEventListener('click', function() {
-        contactFormContainer.style.display = 'none';
+    // Hide the popup when the close button is clicked
+    closeBtn.addEventListener('click', () => {
+        contactPopup.style.display = 'none';
     });
 
-    // Close the contact form when clicking outside of it
-    window.addEventListener('click', function(event) {
-        if (event.target === contactFormContainer) {
-            contactFormContainer.style.display = 'none';
+    // Hide the popup when clicking outside of the popup content
+    window.addEventListener('click', (e) => {
+        if (e.target === contactPopup) {
+            contactPopup.style.display = 'none';
         }
     });
 });
