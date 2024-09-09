@@ -1,184 +1,122 @@
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-  margin: 0;
-  padding: 0;
+/* Resetting Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* Header / Hero Section */
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+#themeToggleBtn {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#themeToggleBtn:hover {
+    background-color: #2c3e50;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Download Button */
+.download-btn {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #2c3e50;
+}
+
+/* Header Styles */
 header {
-  background: #4a90e2;
-  color: white;
-  padding: 40px 0;
-  text-align: center;
+    background: var(--header-bg);
+    color: var(--text-color);
+    padding: 1rem 0;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header p {
-  font-size: 1.2rem;
+/* Header Social Icons */
+header .social-icons a {
+    margin-left: 20px;
+    color: var(--text-color);
+    font-size: 24px;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.download-cv {
-  background-color: #333;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 20px;
-  display: inline-block;
+header .social-icons a:hover {
+    transform: scale(1.2);
+    color: #d9e6f2;
 }
 
-.download-cv:hover {
-  background-color: #555;
+/* Skills Progress Bars */
+.skills-progress {
+    list-style-type: none;
+    padding: 0;
 }
 
-/* Navigation */
-.navbar {
-  background-color: #333;
-  overflow: hidden;
-}
-
-.navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-.navbar ul li {
-  display: inline;
-}
-
-.navbar ul li a {
-  color: white;
-  padding: 15px;
-  display: inline-block;
-  text-decoration: none;
-}
-
-.navbar ul li a:hover {
-  background-color: #555;
-}
-
-/* Sections */
-section {
-  padding: 40px 20px;
-  margin: 20px 0;
-  background-color: white;
-  border-radius: 8px;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Skills Section */
-.skills-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.skill {
-  margin-bottom: 15px;
+.skills-progress li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .progress-bar {
-  background-color: #ddd;
-  border-radius: 5px;
-  height: 10px;
+    width: 70%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-left: 10px;
 }
 
 .progress {
-  background-color: #4a90e2;
-  height: 100%;
-  border-radius: 5px;
+    height: 100%;
+    background-color: #4a90e2;
+    border-radius: 5px;
 }
 
-/* Professional Experience */
-.job {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 20px;
-}
-
-.company-logo img {
-  width: 50px;
-  margin-right: 20px;
-}
-
-.job-details h3 {
-  margin: 0 0 10px;
-}
-
-/* Certifications Section */
-.certification-list img {
-  width: 100px;
-  margin: 0 10px;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.certification-list img:hover {
-  transform: scale(1.1);
-  filter: brightness(110%);
-}
-
-/* Contact Form */
-form input, form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-form button {
-  padding: 10px 20px;
-  background-color: #4a90e2;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-form button:hover {
-  background-color: #357ab8;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #333;
-  color: white;
-}
-
-/* Dark Mode Styles */
+/* Dark Mode Variables */
 body.dark-mode {
-  background-color: #121212;
-  color: #f4f4f4;
+    --header-bg: #2c3e50;
+    --text-color: #ffffff;
+    background-color: #333;
 }
 
-header.dark-mode {
-  background-color: #121212;
+body.light-mode {
+    --header-bg: #4a90e2;
+    --text-color: #ffffff;
 }
 
-.dark-mode-toggle {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-}
-
-.dark-mode .navbar, .dark-mode footer {
-  background-color: #121212;
-}
-
-.dark-mode .navbar ul li a {
-  color: white;
-}
+/* Popup Styles remain unchanged */
