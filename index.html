@@ -255,5 +255,39 @@
     <!-- EmailJS SDK -->
 <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
+    <script type="text/javascript">
+    // Initialize EmailJS with your User ID (Public Key)
+    (function(){
+        emailjs.init("f8XNDClNWjhbyD7FG");
+    })();
+
+    // Handle Form Submission
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Display a loading message
+        document.getElementById('statusMessage').innerText = "Sending...";
+
+        // Collect form data
+        const templateParams = {
+            user_name: document.getElementById('user_name').value,
+            user_email: document.getElementById('user_email').value,
+            message: document.getElementById('message').value
+        };
+
+        // Send email via EmailJS
+        emailjs.send('service_dwdptsh', 'template_koreks3', templateParams)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                document.getElementById('statusMessage').innerText = "Message sent successfully!";
+                // Optionally, reset the form
+                document.getElementById('contactForm').reset();
+            }, function(error) {
+                console.log('FAILED...', error);
+                document.getElementById('statusMessage').innerText = "Failed to send the message. Please try again.";
+            });
+    });
+</script>
+
 </body>
 </html>
