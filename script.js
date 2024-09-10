@@ -1,3 +1,4 @@
+// JavaScript to handle the popup
 document.addEventListener('DOMContentLoaded', function () {
     const contactBtn = document.getElementById('contactBtn');
     const contactPopup = document.getElementById('contactPopup');
@@ -13,18 +14,10 @@ document.addEventListener('DOMContentLoaded', function () {
         contactPopup.style.display = 'none';
     });
 
-    // Theme toggle
-    const themeToggleBtn = document.getElementById('themeToggleBtn');
-    let isDarkMode = false;
-
-    themeToggleBtn.addEventListener('click', () => {
-        isDarkMode = !isDarkMode;
-        if (isDarkMode) {
-            document.body.classList.remove('light-mode');
-            document.body.classList.add('dark-mode');
-        } else {
-            document.body.classList.remove('dark-mode');
-            document.body.classList.add('light-mode');
+    // Hide the popup when clicking outside of the popup content
+    window.addEventListener('click', (e) => {
+        if (e.target === contactPopup) {
+            contactPopup.style.display = 'none';
         }
     });
 });
