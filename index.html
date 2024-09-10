@@ -207,15 +207,29 @@
     </footer>
 
     <!-- Popup Modal -->
-    <div id="contactPopup" class="popup">
-        <div class="popup-content">
-            <span class="close-btn">&times;</span>
-            <div class="contact-info">
-                <h2>Contact Me</h2>
-                <p>Email: <a href="mailto:eduard.popov@protonmail.com">eduard.popov@protonmail.com</a></p>                
+<div id="contactPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <!-- Contact Form -->
+        <form id="contactForm">
+            <h2>Contact Me</h2>
+            <div class="form-group">
+                <label for="user_name">Name:</label>
+                <input type="text" id="user_name" name="user_name" required>
             </div>
-        </div>
+            <div class="form-group">
+                <label for="user_email">Email:</label>
+                <input type="email" id="user_email" name="user_email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+            <p id="statusMessage"></p>
+        </form>
     </div>
+</div>
 
     <!-- JavaScript to handle the popup -->
     <script>
@@ -237,5 +251,9 @@
             }
         });
     </script>
+
+    <!-- EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
 </body>
 </html>
