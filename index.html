@@ -255,24 +255,21 @@
 <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script type="text/javascript">
-    (function(){
-        emailjs.init('f8XNDClNWjhbyD7FG'); // Replace with your actual EmailJS public key
-    })();
+<script>
+  (function() {
+    emailjs.init("YOUR_USER_ID"); // Initialize with your user ID from EmailJS
+  })();
 
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevents the default form submission behavior
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent page reload
 
-        // Send the form data via EmailJS
-        emailjs.sendForm('service_dwdptsh', 'template_koreks3', this)
-            .then(function(response) {
-                alert('Message sent successfully!');
-                console.log('SUCCESS!', response.status, response.text);
-            }, function(error) {
-                alert('Failed to send the message. Please try again.');
-                console.error('FAILED...', error);
-            });
-    });
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+      .then(function() {
+        alert('Form submitted successfully!');
+      }, function(error) {
+        alert('Failed to submit the form: ' + JSON.stringify(error));
+      });
+  });
 </script>
 
 </body>
