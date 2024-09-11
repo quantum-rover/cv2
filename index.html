@@ -224,9 +224,6 @@
   <label for="email">Email:</label>
   <input type="email" id="email" name="email" required>
 
-  <label for="message">Message:</label>
-  <input type="Message" id="message" name="Message" required>
-
   <button type="submit">Submit</button>
 </form>
     </div>
@@ -259,13 +256,13 @@
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
   (function() {
-    emailjs.init("YOUR_USER_ID"); // Initialize with your user ID from EmailJS
+    emailjs.init("f8XNDClNWjhbyD7FG"); // Initialize with your user ID from EmailJS
   })();
 
   document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent page reload
 
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+    emailjs.sendForm('service_dwdptsh', 'template_koreks3', this)
       .then(function() {
         alert('Form submitted successfully!');
       }, function(error) {
